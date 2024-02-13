@@ -49,7 +49,7 @@ def map_categorical_to_numeric(data, columns, target_column):
         # カテゴリカル列を数値に変換
         data[col + '_mean'] = data[col].map(encoding_mapping)
         print('mapping_data:\n', data)
-        # もしデータ型が 'category' なら整数に変換
+        # もしデータ型が 'category' なら浮動小数点に変換
         if data[col + '_mean'].dtype.name == 'category':
             data[col + '_mean'] = data[col + '_mean'].astype('float64')
 
